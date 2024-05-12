@@ -1,15 +1,5 @@
 # Divide & Conquer
 
-- Concept, associated recurrences and analysis of running time
-
-- Solving recurrences by Master Method and Substitution Method
-
-- Classical D&C algorithms and analysis
-
-- Solving problems by D&C and analyzing with recurrences
-
-**Definiton**:
-
 - Solve problem by dividing into subproblems, solving recursively, and combining solutions
 - Steps: Divide, Recur, Conquer
 
