@@ -45,11 +45,11 @@
   - If `isExternal(v)`, return $v$
   - If `k = key(v)`, return $v$  
   - If `k < key(v)`, recurse left child, else recurse right child
-  - Time: $O(h)$ for tree of height $h$
-- Insertion: search to find where new key belongs, insert there, time $O(h)$
-- Deletion: several cases, time $O(h)$  
+  - Time: $\Theta(h)$ for tree of height $h$​
+- Insertion: search to find where new key belongs, insert there, time $\Theta(h)$
+- Deletion: several cases, time $\Theta(h)$ at middle, $\Omega(1)$ at leaf or only 1 child without traversing the tree.
 
-General BSTs may be unbalanced with $h = O(n)$, losing $O(\log n)$ search time.
+General BSTs may be unbalanced with $h = n$, losing $\Theta(\log n)$ search time.
 
 ## Priority Queues
 - Elements with associated keys determining priority 
@@ -63,5 +63,12 @@ General BSTs may be unbalanced with $h = O(n)$, losing $O(\log n)$ search time.
 ## Heaps
 - Implementation of a PQ 
 - Almost complete binary tree, heap-order property
+- Can be implemented in arrays:
+  - Root: index `0`
+  - For node at `i`:
+    - Left child: `2i+1`
+    - Right child: `2i+2`
 - Insertions/deletions in $O(\log n)$ time
-- Heap-sort: build heap in $O(n)$, extract $n$ elements in $O(n\log n)$
+- Heap-sort:
+  - Build heap in $O(n)$ (Bottom-up/heapify) or $O(n \log n)$ (Insertion-based)
+  - Then extract $n$ elements in $O(n\log n)$
