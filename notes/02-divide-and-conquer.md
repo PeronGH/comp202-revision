@@ -37,10 +37,17 @@
 - Recurrence: $T(n) = 7T(n/2) + bn^2 = \Theta(n^{\log_27}) = \Theta(n^{2.81})$
 
 ## Master Method 
-For recurrences of form $T(n) = aT(n/b) + f(n)$:
+For recurrences of form $T(n) = aT(\frac{n}{b}) + f(n)$:
 1. If $f(n) = O(n^{\log_ba-\epsilon})$, then $T(n) = \Theta(n^{\log_ba})$
 2. If $f(n) = \Theta(n^{\log_ba}\log^kn)$, then $T(n) = \Theta(n^{\log_ba}\log^{k+1}n)$  
-3. If $f(n) = \Omega(n^{\log_ba+\epsilon})$ and $af(n/b) \leq \delta f(n)$, then $T(n) = \Theta(f(n))$
+3. If $f(n) = \Omega(n^{\log_ba+\epsilon})$ and $af(\frac{n}{b}) \leq \delta f(n)$, then $T(n) = \Theta(f(n))$​
+
+Or simplified version:
+
+1. Compare magnitude of $f(n)$ and $n^{log_ba}$​
+2. If $n^{log_ba}$ is larger, then $T(n)=\Theta(n^{log_ba})$​
+3. If $f(n)$ is the combination of $n^{\log_ba}$ and  $\log^kn$, then $T(n) = \Theta(n^{\log_ba}\log^{k+1}n)$
+4. If $f(n)$ is larger, then $T(n) = \Theta(f(n))$
 
 ## Integer Multiplication
 - Naive: $\Theta(n^2)$
