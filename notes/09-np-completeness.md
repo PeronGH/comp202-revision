@@ -17,12 +17,17 @@
 - Solving decision problem efficiently allows binary search for optimal value
 
 ## Complexity Classes
+
+![P_np_np-complete_np-hard.svg](https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/P_np_np-complete_np-hard.svg/1920px-P_np_np-complete_np-hard.svg.png)
+
 ### Class P
 - Decision problems solvable in polynomial time
 - Examples: MST, fractional knapsack, shortest paths (non-negative weights), max flow, Euler tours, interval scheduling
 
 ### Efficient Certification and Class NP 
 - NP: Problems with efficient certifiers
+  - Which means answer "yes" can be verified in polynomial time
+
 - Efficient certifier $B$: 
   - Takes input $s$ and certificate $t$
   - $s$ is a yes-instance iff there exists $t$, $|t| \leq \text{poly}(|s|)$, with $B(s,t) = $ yes
@@ -36,6 +41,8 @@
 
 ### Class co-NP
 - Problems with efficient disqualifiers 
+  - Which means answer "no" can be verified in polynomial time
+
 - Example: Primality - certificate for no is factorization
 - NP = co-NP also unknown
 

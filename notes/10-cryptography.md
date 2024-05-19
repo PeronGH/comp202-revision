@@ -20,9 +20,13 @@
   - Modular arithmetic: $a \equiv b \pmod{n}$ if $a-b = kn$, some integer $k$
 
 ### Euclid's Algorithm
-- Computes $\gcd(a,b)$ based on $\gcd(a,b) = \gcd(b, a \bmod b)$
+
+- Computes $\gcd(a,b)$ based on $\gcd(a,b) = \gcd(b, a \bmod b)$​
+- Simplified steps:
+  1. replace larger number with difference
+  2. repeat step 1 until 2 numbers equal, and the result is GCD
 - $O(\log(\max\{a,b\}))$ arithmetic operations
-- Extended version also finds integers $j,k$ with $d = ja+kb$
+- (Optional) Extended version also finds integers $j,k$ with $d = ja+kb$​
 
 ### RSA Setup
 - Primes $p,q$, modulus $n=pq$, $\phi(n) = (p-1)(q-1)$ 
