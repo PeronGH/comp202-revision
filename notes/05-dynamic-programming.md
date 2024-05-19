@@ -9,7 +9,7 @@
 - Approach: Find recursive solution, then compute bottom-up to avoid recomputation
 
 ## {0, 1} Knapsack Problem
-- Items with weights $w_i$ and benefits $b_i$, max total weight $W$
+- $n$ Items with weights $w_i$ and benefits $b_i$, max total weight $W$ (capacity)
 - Goal: Subset with maximum total benefit, total weight $\leq W$  
 - Naïve: Try all $2^n$ subsets, $O(2^n)$ time
 - DP Solution:
